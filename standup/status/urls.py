@@ -5,7 +5,7 @@ from django.views.decorators.cache import cache_page
 from . import views
 
 
-SLUG_RE = r'(?P<slug>[-a-zA-Z0-9_@`]+)'
+SLUG_RE = r'(?P<slug>[-a-zA-Z0-9_@`\[\]\{\}\^]+)'
 cache_feed = cache_page(settings.CACHE_FEEDS_SECONDS)
 
 urlpatterns = [
