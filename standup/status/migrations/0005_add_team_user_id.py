@@ -21,11 +21,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='teamuser',
-            name='id',
-            field=models.AutoField(serialize=False, auto_created=True, verbose_name='ID')
-        ),
         migrations.RunPython(fill_teamuser_ids, reverse_code=lambda x, y: None),
         migrations.AlterField(
             model_name='teamuser',
